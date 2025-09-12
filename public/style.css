@@ -181,3 +181,78 @@ main {
 .site-footer a:hover {
     color: lightgreen;
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .barra-lateral {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .barra-lateral button {
+        flex: 1 1 45%;
+        max-width: 200px;
+    }
+
+    .projeto-destaque img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-principal ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .barra-de-pesquisa-header {
+        width: 100%;
+    }
+
+    .secao-horizontal {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .site-header {
+        padding: 10px 20px;
+    }
+
+    .barra-de-pesquisa-header input {
+        width: 100%;
+    }
+
+    .barra-lateral {
+        flex-direction: column;
+    }
+}
+
+.secao-horizontal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.conteudo-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
